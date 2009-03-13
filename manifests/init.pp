@@ -3,7 +3,7 @@ class apache2 {
 
   service{ apache2: ensure => running, hasrestart => true }
 
-  apache::site{"default":
+  apache2::site{"default":
       ensure => absent,
       require => Package['apache2']
   }
